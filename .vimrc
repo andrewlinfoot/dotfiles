@@ -21,6 +21,16 @@ call plug#end()
 let mapleader=","
 nnoremap ; :
 
+" Shortcut to edit THIS configuration file: (e)dit (c)onfiguration
+nnoremap <silent> <leader>ec :e $MYVIMRC<CR>
+
+" Shortcut to source (reload) THIS configuration file after editing it: (s)ource (c)onfiguraiton
+nnoremap <silent> <leader>sc :source $MYVIMRC<CR>
+
+" use ff for escape
+" http://vim.wikia.com/wiki/Avoid_the_escape_key
+inoremap ff <Esc>
+
 set hidden
 set history=100
 
@@ -40,7 +50,7 @@ autocmd BufWritePre * :%s/\s\+$//e
 set hlsearch
 
 " The Cody Gibb replacer special
-nnoremap <Leader>s :.,$s/\<<C-r><C-w>\>//gc<Left><Left><Left>
+nnoremap <Leader>sr :.,$s/\<<C-r><C-w>\>//gc<Left><Left><Left>
 
 " The Cody Gibb scroller special
 map <c-j> j<c-e>
