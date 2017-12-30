@@ -7,6 +7,7 @@ Plug 'Shougo/deoplete.nvim'
 Plug 'https://github.com/ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Color scheme
 Plug 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
@@ -18,6 +19,7 @@ Plug 'Quramy/tsuquyomi'
 call plug#end()
 
 let mapleader=","
+nnoremap ; :
 
 set hidden
 set history=100
@@ -37,10 +39,17 @@ autocmd BufWritePre * :%s/\s\+$//e
 " Highlight found words on search
 set hlsearch
 
+" The Cody Gibb replacer special
+nnoremap <Leader>s :.,$s/\<<C-r><C-w>\>//gc<Left><Left><Left>
+
+" The Cody Gibb scroller special
+map <c-j> j<c-e>
+map <c-k> k<c-y>
+
 " Reopen previously opened file by double tapping Leader key
 nnoremap <Leader><Leader> :e#<CR>
 
-" Show matching parenthesis
+" Show matching brackets when text indicator is over them
 set showmatch
 
 " Colors
@@ -60,12 +69,14 @@ if !exists("g:ycm_semantic_triggers")
 " Enable deoplete at startup
 let g:deoplete#enable_at_startup = 1
 
-" NERDTree
-" Open by default
+" Open NERDTree by default
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " Open/Close NERDTree
 nnoremap <Leader>f :NERDTreeToggle<Enter>
 " Close NERDTree after opening file
 let NERDTreeQuitOnOpen = 1
+" Show hidden files in NERDTree
+let NERDTreeShowHidden=1
+
 
