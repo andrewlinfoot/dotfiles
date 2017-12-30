@@ -92,7 +92,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias gitl='git log --graph --full-history --all --pretty=format:"%h%x09%d%x20%s"'
 alias purgeallbuilds='rm -rf ~/library/Developer/Xcode/DerivedData/*'
-
+alias vi='nvim'
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
 [[ -f /Users/andrewlinfoot/.nvm/versions/node/v8.0.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/andrewlinfoot/.nvm/versions/node/v8.0.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
