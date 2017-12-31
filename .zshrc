@@ -5,6 +5,10 @@ export ANDROID_HOME=${HOME}/Library/Android/sdk
 export PATH=${PATH}:${ANDROID_HOME}/tools
 export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 
+# Make neovim the default editor
+export VISUAL=nvim
+export EDITOR="$VISUAL"
+
 ### Added by the Heroku Toolbelt
 export PATH=/usr/local/heroku/bin:$PATH
 
