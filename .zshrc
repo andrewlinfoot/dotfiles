@@ -62,7 +62,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git github brew nvm heroku osx git-flow tmux)
+plugins=(git github brew nvm heroku osx git-flow tmux zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -95,6 +95,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias gitl='git log --graph --full-history --all --pretty=format:"%h%x09%d%x20%s"'
+alias gmup='git checkout master && git pull && git checkout -'
+# alias grbm='git merge-base `git rev-parse --abbrev-ref HEAD` master | xargs git rebase -i'
 alias purgeallbuilds='rm -rf ~/library/Developer/Xcode/DerivedData/*'
 alias vi='nvim'
 # tabtab source for serverless package

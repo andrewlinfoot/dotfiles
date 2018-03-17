@@ -9,6 +9,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'w0rp/ale'
+Plug 'tpope/vim-fugitive'
 
 " Color scheme
 Plug 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
@@ -28,9 +29,9 @@ nnoremap <silent> <leader>ec :e $MYVIMRC<CR>
 " Shortcut to source (reload) THIS configuration file after editing it: (s)ource (c)onfiguraiton
 nnoremap <silent> <leader>sc :source $MYVIMRC<CR>
 
-" use ff for escape
-" http://vim.wikia.com/wiki/Avoid_the_escape_key
-inoremap ff <Esc>
+" use jj for escape
+" http://m.wikia.com/wiki/Avoid_the_escape_key
+inoremap jj <Esc>
 
 set hidden
 set history=100
